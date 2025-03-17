@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <style>
-        body{
-            
-            background-color: yellow;
-            background-image: url("ball.png");
-            background-repeat: no-repeat;
-            background-position:top right;
-            background-attachment: fixed;}
-            
-
-        
-    </style>
+<style>
+#grad1 {
+  height: 400px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to top right, red, orange, yellow, green, blue, indigo, violet);
+}
+</style>
 </head>
 <body>
-   Hello World 
+
+<div id="grad1" style="text-align:center;margin:auto;color:#888888;font-size:40px;font-weight:bold">
+Welcome to Myspace
+</div>
+
 </body>
 </html>
