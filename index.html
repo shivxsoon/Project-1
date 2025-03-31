@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-div {
-  width: 300px;
-  height: 100px;
-  background-color: yellow;
-  border: 1px solid black;
-}
-#myDiv {
-  transform: rotateX(180deg);
-}
-
-</style>
-</head>
-<body>
-
-<div>
-Codingal
-</div>
-<div id="myDiv">
-Codingal
-</div>
-</body>
+    <head>
+        <style>
+            div{
+                right:30px;
+                border: 3px solid #73ad21;
+            }
+            div.absolute{
+                position:absolute;
+                left:50px;
+                border:3px solid blue;
+            }
+            div.relative {
+                position:relative;
+                left: 100px;
+                border: 3px solid #73ad21;
+            }
+            div.fixed {
+                position: fixed;
+                top: 0;
+                right: 20px;
+                width: 300px;
+                border: 3px solid #73ad21;
+            }
+            div.sticky{
+                position: sticky;
+                top: 1px;
+                left: 20px;
+                width: 100px;
+                border: 3px solid #73ad21;
+            }
+        </style>
+    </head>
 </html>
+<div>
+    Div no position property.
+</div>
+<div class="sticky">
+    Sticky position property
+</div>
+<div class="relative">
+    Relative position property
+</div>
