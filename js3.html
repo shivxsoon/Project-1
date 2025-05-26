@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html>
-	<body>
-	<p>Setting a default value to a function parameter.</p>
-	<p id="demo"></p>
-	<script>
-		function myFunction(x, y) {
-		            if (y=== undefined) {
-		            y = 2;
-		               }  
-		return x * y ;
-		}
-		document.getElementById("demo").innerHTML = myFunction(5);
-	</script>
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        add = (a,b,c)=> a+b+c;
+        document.getElementById("result").innerHTML = add(15,10,18);
+    </script>
+</body>
 </html>
