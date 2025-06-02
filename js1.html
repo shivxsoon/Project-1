@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <h2>Convert a JavaScript object into a JSON string, and send it to the server.</h2> 
-        <p id="result"></p>
+    <head>
         <script>
-            
-            var myObj = { name: "Shiv", age: 14, grade: 9 };
-            
-            
-            var myJSON = JSON.stringify(myObj);
-            
-           
-            var newObj = JSON.parse(myJSON);
-            
-           
-            document.getElementById("result").innerHTML = 
-                "Name: " + newObj.name + "<br>" +
-                "Age: " + newObj.age + "<br>" +
-                "Grade: " + newObj.grade;
-        </script>
+            function validateForm(){
+                var x = document.forms["myForm"]["fname"].value;
+                if(x== ""){
+                    alert("Name must be filled out");
+                    return false;
+                }
+                else document.write("Name Submitted");
+            }
+            </script>
+    </head>
+    <body>
+        <form name="myForm" onsubmit="validateForm()">
+        Name: <input type="text" name="fname">
+        <input type="sumbit" value = "Submit">
+        <p id="message"></p>
+       </form>
     </body>
 </html>
