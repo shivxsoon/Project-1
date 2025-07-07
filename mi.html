@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shiv's Footer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0f8ff;
+      color: #003366;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #003366;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .logo {
+      width: 150px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      color: #ffd700;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: 40px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .intro p {
+      font-size: 20px;
+    }
+
+    .players-section {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .players-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .player-card {
+      background-color: #ffffff;
+      border: 2px solid #ffd700;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .player-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .player-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .player-card h3 {
+      color: #003366;
+      font-size: 24px;
+      margin: 15px;
+    }
+
+    .player-card p {
+      color: #333;
+      font-size: 16px;
+      margin: 0 15px 20px;
+    }
+
+    footer {
+      background: url('https://upload.wikimedia.org/wikipedia/commons/3/33/Wankhede_Stadium.jpg') no-repeat center;
+      background-size: cover;
+      position: relative;
+      color: white;
+      margin-top: 60px;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 51, 0.88);
+      z-index: 0;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 60px 20px 30px;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-column {
+      flex: 1 1 280px;
+      margin: 20px;
+    }
+
+    .footer-column h3 {
+      font-size: 22px;
+      color: #ffd700;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .footer-column p,
+    .footer-column a {
+      color: #eee;
+      font-size: 16px;
+      line-height: 1.8;
+      text-decoration: none;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin: 10px 0;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      color: #ccc;
+      font-size: 16px;
+      padding: 20px;
+      border-top: 1px solid #445577;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-bottom a {
+      color: #ffd700;
+    }
+
+    @media screen and (max-width: 768px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      .player-card img {
+        height: 220px;
+      }
+
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img class="logo" src="https://i.pinimg.com/736x/37/cd/d5/37cdd544a025e42fec5202a3d5b095c8.jpg" alt="Mumbai Indians Logo">
+    <h1>Welcome to Mumbai Indians</h1>
+  </header>
+
+  <section class="intro">
+    <p>
+      Mumbai Indians are the most iconic team in the IPL. Known for their blue and gold colors, legendary players, and unmatched team spirit, they've won hearts and trophies alike. From power hitters to fiery pacers, MI is a force like no other.
+    </p>
+  </section>
+
+  <section class="players-section">
+    <div class="players-grid">
+      <div class="player-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3P1xmwXep5MjksAULmsJUndszSLeeZlq-Aw&s" alt="Rohit Sharma">
+        <h3>Rohit Sharma</h3>
+        <p>Captain and opening batsman. A true leader with multiple IPL trophies to his name.</p>
+      </div>
+      <div class="player-card">
+        <img src="https://c.ndtvimg.com/2024-10/86qfi0p8_jasprit-bumrah-bcci_625x300_28_October_24.jpg?im=FeatureCrop,algorithm=dnn,width=806,height=605" alt="Jasprit Bumrah">
+        <h3>Jasprit Bumrah</h3>
+        <p>MI’s pace machine and India’s strike bowler, lethal at the death overs.</p>
+      </div>
+      <div class="player-card">
+        <img src="https://c.ndtvimg.com/2025-05/1n05n05s_hardik-pandya_625x300_27_May_25.jpg?im=FeatureCrop,algorithm=dnn,width=806,height=605" alt="Hardik Pandya">
+        <h3>Hardik Pandya</h3>
+        <p>All-rounder with explosive power, sharp fielding, and confidence on the field.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>About Mumbai Indians</h3>
+        <p>
+          Mumbai Indians is a franchise cricket team representing Mumbai in the Indian Premier League. Founded in 2008, MI has a rich legacy and passionate fanbase.
+        </p>
+      </div>
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:info@mumbaiindians.com">info@mumbaiindians.com</a></li>
+          <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="https://www.iplt20.com/teams/mumbai-indians">Team Roster</a></li>
+          <li><a href="https://www.mumbaiindians.com/fixtures">Match Schedule</a></li>
+          <li><a href="https://shop.mumbaiindians.com/?srsltid=AfmBOopBQqTI8NX4qo_IU7MfMmYlkkdSvu5gKITxuHB1EujjyoScQoLK">Buy Merchandise</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p> 2025 Shiv's Website |  Mumbai Indians  | <a href="mi.html">Back to Top</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
