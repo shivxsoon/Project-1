@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Indian Cricket Team - Match Schedule</title>
+  <style>
+    header h1 {
+      font-size: 3em;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    nav {
+      background-color: #112b3c;
+      padding: 12px;
+      text-align: center;
+      border-top: 1px solid #1e90ff;
+    }
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 18px;
+      font-size: 1.2em;
+      font-weight: 500;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      padding-bottom: 5px;
+    }
+    nav a:hover {
+      color: #1e90ff;
+      border-bottom: 2px solid #1e90ff;
+    }
+    body {
+      background-color: #0d1b2a;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h2 {
+      color: #1e90ff;
+      margin-bottom: 30px;
+      font-size: 2.5em;
+    }
+    table {
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto 40px;
+      border-collapse: collapse;
+      background-color: #1b263b;
+      box-shadow: 0 0 12px rgba(0,0,0,0.5);
+    }
+    th, td {
+      border: 1px solid #1e90ff;
+      padding: 15px;
+      font-size: 1.1em;
+      text-align: center;
+    }
+    th {
+      background-color: #1e90ff;
+      color: #0d1b2a;
+    }
+    tr:nth-child(even) {
+      background-color: #243447;
+    }
+    tr:hover {
+      background-color: #2e3d55;
+    }
+    #countdown {
+      font-size: 1.8em;
+      color: #1e90ff;
+      margin-top: 20px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+    <h1>Indian Cricket Team</h1>
+    <nav>
+      <a href="homepage">Home</a>
+      <a href="players.html">Players</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <h2>Upcoming Matches</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Match</th>
+        <th>Venue</th>
+        <th>Time (IST)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>July 10, 2025</td>
+        <td>🇮🇳 India vs England </td>
+        <td>Lord's Cricket Ground, London</td>
+        <td>3:30 PM</td>
+      </tr>
+      <tr>
+        <td>July 23, 2025</td>
+        <td>🇮🇳 India vs England </td>
+        <td>Headingley Cricket Ground, Leeds</td>
+        <td>3:30 PM</td>
+      </tr>
+      <tr>
+        <td>July 31, 2025</td>
+        <td>🇮🇳 India vs England </td>
+        <td>Old Trafford Cricket Ground, Manchester</td>
+        <td>3:30 PM</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div id="countdown"></div>
+
+  <script>
+    const matches = [
+      { dateStr: 'July 10, 2025 19:30:00 GMT+0530', name: 'India vs England' },
+      { dateStr: 'July 23, 2025 19:30:00 GMT+0530', name: 'India vs England' },
+      { dateStr: 'July 31, 2025 18:00:00 GMT+0530', name: 'India vs England' }
+    ];
+
+    function getNextMatch() {
+      const now = new Date();
+      for (const match of matches) {
+        const matchDate = new Date(match.dateStr);
+        if (matchDate > now) return match;
+      }
+      return null;
+    }
+
+    function startCountdown() {
+      const countdownEl = document.getElementById('countdown');
+      const nextMatch = getNextMatch();
+      if (!nextMatch) {
+        countdownEl.textContent = 'No upcoming matches!';
+        return;
+      }
+      const targetDate = new Date(nextMatch.dateStr);
+
+      function update() {
+        const now = new Date();
+        const diff = targetDate - now;
+        if (diff <= 0) {
+          countdownEl.textContent = `${nextMatch.name} is live now!`;
+          clearInterval(timerId);
+          return;
+        }
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        countdownEl.textContent = `Next Match: ${nextMatch.name} in ${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }
+
+      update();
+      const timerId = setInterval(update, 1000);
+    }
+
+    startCountdown();
+  </script>
+
+</body>
+</html>

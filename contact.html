@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Indian Cricket Team - Contact Us</title>
+  <style>
+
+      header h1 {
+      font-size: 3em;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    nav {
+      background-color: #112b3c;
+      padding: 12px;
+      text-align: center;
+      border-top: 1px solid #1e90ff;
+    }
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 18px;
+      font-size: 1.2em;
+      font-weight: 500;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      padding-bottom: 5px;
+    }
+    nav a:hover {
+      color: #1e90ff;
+      border-bottom: 2px solid #1e90ff;
+    }
+    body {
+      background-color: #0d1b2a;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h2 {
+      color: #1e90ff;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+    form {
+      background-color: #1b263b;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    label {
+      display: block;
+      text-align: left;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #1e90ff;
+      border-radius: 5px;
+      background-color: #0d1b2a;
+      color: #ffffff;
+      font-size: 1em;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #63a4ff;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #1e90ff;
+      color: #0d1b2a;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #63a4ff;
+    }
+    #thankYouMessage {
+      display: none;
+      margin-top: 30px;
+      font-size: 1.5em;
+      color: #1e90ff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+     <header>
+    <h1>Indian Cricket Team</h1>
+    <nav>
+      <a href="homepage">Home</a>
+      <a href="players.html">Players</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <h2>Contact Us</h2>
+
+  <form>
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" rows="6" placeholder="Type your message here..." required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div id="thankYouMessage">Thank you! Your message has been sent.</div>
+
+  <script>
+    const form = document.querySelector('form');
+    const thankYou = document.getElementById('thankYouMessage');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Stop actual submission for demo
+      form.style.display = 'none'; // Hide the form
+      thankYou.style.display = 'block'; // Show thank you
+    });
+  </script>
+
+</body>
+</html>

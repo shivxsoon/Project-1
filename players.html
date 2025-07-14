@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Cricket Team</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background-color: #0d1b2a;
+      color: white;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #0d1b2a, #1b263b);
+      padding: 30px 0 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 3em;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    nav {
+      background-color: #112b3c;
+      padding: 12px;
+      text-align: center;
+      border-top: 1px solid #1e90ff;
+    }
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 18px;
+      font-size: 1.2em;
+      font-weight: 500;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      padding-bottom: 5px;
+    }
+    nav a:hover {
+      color: #1e90ff;
+      border-bottom: 2px solid #1e90ff;
+    }
+    .slider {
+      max-width: 100%;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slide 12s infinite;
+    }
+    .slides img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+    @keyframes slide {
+      0% {margin-left: 0;}
+      33% {margin-left: -100%;}
+      66% {margin-left: -200%;}
+      100% {margin-left: 0;}
+    }
+    section {
+      padding: 60px 30px;
+      text-align: center;
+    }
+    .player-card {
+      background-color: #1b263b;
+      border-radius: 15px;
+      overflow: hidden;
+      margin: 20px auto;
+      max-width: 300px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    }
+    .player-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+    .player-card h3 {
+      color: #1e90ff;
+      margin: 15px 0 5px;
+    }
+    .player-card p {
+      padding: 0 15px 20px;
+      color: #cbd5e1;
+    }
+    .players-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    footer {
+      background-color: #1b263b;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #ffffff;
+      border-top: 2px solid #1e90ff;
+    }
+    </style>
+    
+    <header>
+    <h1>Indian Cricket Team</h1>
+    <nav>
+      <a href="homepage">Home</a>
+      <a href="players.html">Players</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  
+  
+  <section id="players">
+    <h2>Key Players</h2>
+    <div class="players-container">
+      <div class="player-card">
+        <img src="https://cdn.britannica.com/48/252748-050-C514EFDB/Virat-Kohli-India-celebrates-50th-century-Cricket-November-15-2023.jpg" alt="Virat Kohli">
+        <h3>Virat Kohli</h3>
+        <p>Legendary batsman known for consistency and aggression. Former captain of India.</p>
+      </div>
+      <div class="player-card">
+        <img src="https://static.independent.co.uk/2025/02/09/16/09-8610721f4b5a400bbfcbbf1048e5169b.jpg" alt="Rohit Sharma">
+        <h3>Rohit Sharma</h3>
+        <p>Captain and opener with explosive scoring ability and calm leadership.</p>
+      </div>
+      <div class="player-card">
+        <img src="https://thefederal.com/h-upload/2024/06/10/512221-jasprit-bumrah-t20-wc.webp" alt="Jasprit Bumrah">
+        <h3>Jasprit Bumrah</h3>
+        <p>India’s pace spearhead known for his deadly yorkers and precision.</p>
+      </div>
+       <div class="player-card">
+      <img src="https://crictoday.com/wp-content/uploads/2024/07/Hardik-Pandya-.webp" alt="Hardik Pandya">
+      <h3>Hardik Pandya</h3>
+      <p>All-rounder with the ability to change games with both bat and ball. A dynamic match-winner.</p>
+    </div>
+  </section>
