@@ -1,0 +1,5 @@
+print("Welcome To Python")
+print(67)
+print("Please start by putting py at the end of your file name \n")
+print("Kohli",18)
+print("What's good?", end="*")
