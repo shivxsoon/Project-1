@@ -1,24 +1,38 @@
-name= "Shiv"
-age=14
-is_student=True
-weight= 48.7
+score = 0
 
-print("Name :", name)
-print("Data Type of Name is", type(name))
+answer = input("Who is the current captain of the India cricket team? ")
+if answer.lower() == "rohit sharma":
+    print("Correct!")
+    score += 1
+else:
+    print(f"The correct answer is 'Rohit Sharma', not {answer!r}")
 
-print("Age :", age)
-print("Data Type of Age is", type(age))
+answer = input("Which Indian player is known as the 'King Kohli'? ")
+if answer.lower() == "virat kohli":
+    print("Correct!")
+    score += 1
+else:
+    print(f"The correct answer is 'Virat Kohli', not {answer!r}")
 
-print("is_student :", is_student)
-print("Data Type of is_student is", type(is_student))
+answer = input("Which stadium is also called the 'Home of Indian Cricket'? ")
+if answer.lower() == "wankhede stadium" or answer.lower() == "wankhede":
+    print("Correct!")
+    score += 1
+else:
+    print(f"The correct answer is 'Wankhede Stadium', not {answer!r}")
 
-print("Weight :", weight)
-print("Data Type of weight is", type(weight))
+answer = input("Who is the highest run scorer in ODI cricket for India? ")
+if answer.lower() == "sachin tendulkar":
+    print("Correct!")
+    score += 1
+else:
+    print(f"The correct answer is 'Sachin Tendulkar', not {answer!r}")
 
-print("\n After Type Casting....")
-age = str(age)
-print(age)
-print("Data Type of age is", type(age))
-weight = int(weight)
-print(weight)
-print("Data Type of Weight is", type(weight))
+answer = input("Which Indian bowler is known for his yorkers and death overs? ")
+if answer.lower() == "jasprit bumrah":
+    print("Correct!")
+    score += 1
+else:
+    print(f"The correct answer is 'Jasprit Bumrah', not {answer!r}")
+
+print(f"\nYour final score is {score}/5")
